@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-navbar></app-navbar>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <label for="" class="label-form">Book Name</label>
+            <input name="name" type="text" class="form-control" [(ngModel)]="name"></div>
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                <br>
+                <button class="btn btn-primary" (click)="read()">search</button>
+            </div>
+<br><br>
+        
+              <table class="table">
+                <thead>
+                  <tr>
+                     <th scope="col">ID</th>
+                    <th scope="col">Book Name</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Publish Date</th>
+                    
+          
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of Data">
+                 
+                    <td>{{i.id}}</td>
+                    <td>{{i.name}}</td>
+                    <td>{{i.author}}</td>
+                    <td>{{i.price}}</td>
+                    <td>{{i.pdate}}</td>
+                  
+    
+                   
+                    
+                    
+                    
+                  
+                  </tr>
+                
+                </tbody>
+              </table>
+    
+            
+            </div>
+
+
+
+</div>

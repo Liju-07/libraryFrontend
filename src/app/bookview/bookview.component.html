@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-lg-12 col-xl-12 col-xxl-12">
+            <app-navbar></app-navbar>
+         <div *ngIf="status then show else  loading"></div>
+         <ng-template #show>
+          <table class="table">
+            <thead>
+              <tr>
+                 <th scope="col">ID</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">Author</th>
+                <th scope="col">Price</th>
+                <th scope="col">Publish Date</th>
+                
+      
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of Data">
+             
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.author}}</td>
+                <td>{{i.price}}</td>
+                <td>{{i.pdate}}</td>
+               <td> <button class="btn btn-danger" (click)="delete(i.id)">Delete</button></td>
+
+               
+                
+                
+                
+              
+              </tr>
+            
+            </tbody>
+          </table>
+
+         </ng-template>
+         <ng-template #loading>
+
+          <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow spinner-grow-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+
+         </ng-template>
+        </div>
+    </div>
+</div>
