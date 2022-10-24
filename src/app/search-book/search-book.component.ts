@@ -11,8 +11,23 @@ export class SearchBookComponent implements OnInit {
   constructor(private api:ApiService) { }
 
 
-  name=""
+  price=""
+  author=""
+  pdate=""
+name=""
+id=""
+
 Data:any=[]
+
+
+
+edit=()=>{
+
+this.api.update(this.Data[0]).subscribe()
+alert("Data Updated")
+
+}
+
 
   read=()=>{
     let data={

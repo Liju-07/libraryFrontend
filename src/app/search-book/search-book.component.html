@@ -11,37 +11,39 @@
             </div>
 <br><br>
         
-              <table class="table">
-                <thead>
-                  <tr>
-                     <th scope="col">ID</th>
-                    <th scope="col">Book Name</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Publish Date</th>
-                    
-          
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let i of Data">
-                 
-                    <td>{{i.id}}</td>
-                    <td>{{i.name}}</td>
-                    <td>{{i.author}}</td>
-                    <td>{{i.price}}</td>
-                    <td>{{i.pdate}}</td>
-                  
+         <div *ngFor="let i of Data">
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="label-form">Book Id</label>
+                <input value="{{i.id}}" type="text" class="form-control" [(ngModel)]="i.id"></div>
+
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="label-form">Book Name</label>
+                <input value="{{i.name}}" type="text" class="form-control" [(ngModel)]="i.name"></div>
     
-                   
-                    
-                    
-                    
-                  
-                  </tr>
-                
-                </tbody>
-              </table>
+    
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                    <label for="" class="label-form">Publish Date</label>
+                    <input  value="{{i.pdate}}" type="date" class="form-control" [(ngModel)]="i.pdate"></div>
+    
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                <label for="" class="label-form">Author</label>
+                <input  value="{{i.author}}" type="text" class="form-control" [(ngModel)]="i.author"></div>
+    
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                    <label for="" class="label-form">Price</label>
+                    <input  value="{{i.price}}" type="text" class="form-control" [(ngModel)]="i.price"></div>
+    
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                        <br>
+                        <button class="btn btn-success" (click)="edit()">Update</button>
+                    </div>
+
+
+
+
+
+         </div>
     
             
             </div>

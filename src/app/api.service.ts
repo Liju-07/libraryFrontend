@@ -19,6 +19,9 @@ delete=(data:any)=>{
 search=(data:any)=>{
   return this.http.post("http://localhost:8080/search",data)
 }
+update=(data:any)=>{
+  return this.http.post("http://localhost:8080/update",data)
+}
 
 
 
